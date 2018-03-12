@@ -1,0 +1,195 @@
+/*!
+Theme Name: Sprocket
+Theme URI: http://tinktank.in/demo/sprocket/
+Description: A responsive theme with customisable header. 
+Author: Neil Hainsworth
+Author URI: http://neilorangepeel.com
+Version: 1
+*/
+
+$darkGray:    #333;
+$gray:        #555;
+$lightGray:   #BBB;
+$transBlack:  rgba(0,0,0,0.1);
+$red:         #FA5D5A;
+
+@import 'bp';
+@import 'reset';
+@import 'toolbox';
+@import 'typography';
+
+//----------------------------------- STRUCTURE
+body {
+  font-size: 20px;
+  @include bp (S) {
+    font-size: 16px;
+  }
+}
+.header-wrap {
+  max-width: 65em;
+  margin: 0 auto;
+  padding: 2em;
+}
+.page-wrap {
+  width: 100%;
+  max-width: 45em;
+  padding: 4em 5%;
+  margin: 0 auto;
+  @include bp (S) {
+    width: 100%;
+  }
+}
+
+//----------------------------------- HEADER + NAV
+.header {
+  background: #ccc no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  position: relative;
+  height: 22em;
+
+  a {
+    text-decoration: none;
+    @include Nove;
+  }
+
+  .logo {
+    font-size: 1em;
+    float: left;
+    margin-bottom: 1.6em;
+    @include bp (S) {
+      float: none;
+      margin: 0 auto 1.6em;
+      text-align:center;
+    }
+    a {
+      color: white;
+     }
+  }
+
+  .main-nav {
+    float: right;
+    @include bp (S) {
+      float: none;
+      text-align:center;
+    }
+    ul {
+      margin:0;
+      padding: 0;
+    }
+    li {
+      margin-left: 1em; 
+      display: inline-block;
+    }
+    a {
+      color: white;
+      display: block;
+      font-size: 0.6em;
+
+      &:hover, &:focus {
+        border-bottom: 2px solid white;
+      }
+    }
+  }
+}
+//----------------------------------- ARTICLE
+.post-article, .page-article {
+  margin-bottom: 4em;
+}
+.post-title {
+  @include Nove;
+  font-size:2.2em;
+  text-align: center;
+  line-height: 1.2em;
+  @include bp (S) {
+    font-size: 1.8em;
+  }
+
+  a {
+    color: $darkGray;
+
+    &:hover, &:focus {
+      opacity: 0.8;
+      text-decoration: none;
+    }
+  }
+}
+.post-date {
+  display: block;
+  text-align: center;
+  margin-bottom: 3em;
+  color: $lightGray;
+  font-size: 0.7em;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-family: 'Helvetica Neue', sans-serif;
+}
+
+//----------------------------------- FOOTER
+.footer {
+  padding-top:4em;
+  border-top: 1px solid $transBlack;
+  text-align: center;
+}
+
+//----------------------------------- ARCHIVES
+.archive-list {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 4em;
+  h2 {
+    font-size: 1em;
+    font-weight: normal;
+    font-style: italic;
+  }
+}
+
+//----------------------------------- COMMENTS
+.comments-wrap {
+  margin-bottom: 4em;
+}
+.commentlist {
+  padding: 0;
+
+  li {
+    padding: 1em 0;
+    list-style: none;
+    border-top: 1px solid $transBlack;
+    border-bottom: 1px solid $transBlack;
+  }
+  .avatar {
+    float: left;
+    width: 15%;
+    margin-right: 1em;
+  }
+  .comment-meta {
+    margin-bottom: 1em;
+  }
+}
+textarea, input {
+  max-width:100%;
+  margin-bottom: 1em;
+  background: transparent;
+  border: 1px solid rgba(0,0,0,0.2);
+  color: $gray;
+  font-size: 1em;
+  font-family: 'Noto Serif', Georgia;
+}
+@include bp (S) {
+  .commentform {
+    label {
+      font-size: 1em;
+    }
+    input {
+      width: 50%;
+    }
+  }
+}
+//----------------------------------- CONTACT FORM 7
+.wpcf7-form {
+  p {
+    margin: 0;
+  }
+}

@@ -1,0 +1,354 @@
+/*!
+Theme Name: Sprocket
+Theme URI: http://tinktank.in/demo/sprocket/
+Description: A responsive theme with customisable header. 
+Author: Neil Hainsworth
+Author URI: http://neilorangepeel.com
+Version: 1
+*/
+@import url(http://fonts.googleapis.com/css?family=Noto+Serif:400,700,400italic);
+html, body, body div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, footer, header, hgroup, menu, nav, section, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+article, aside, figure, footer, header, hgroup, nav, section, img {
+  display: block;
+}
+
+img,
+object,
+embed {
+  max-width: 100%;
+  height: auto;
+}
+
+html {
+  overflow-y: scroll;
+}
+
+[id*='attachment_'] {
+  max-width: 100% !important;
+}
+
+.group:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.alignleft {
+  float: left;
+}
+
+.alignright {
+  float: right;
+}
+
+.aligncenter {
+  margin: 0 auto;
+}
+
+/*! Novencento Wide - A free font available here http://typography.synthview.com/ */
+@font-face {
+  font-family: 'Novecentowide';
+  src: url("_/_type/Novecentowide.woff") format("woff"), url("_/_type/Novecentowide.ttf") format("truetype");
+}
+
+html {
+  font: 100%/1.6 sans-serif;
+}
+
+body {
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+  word-wrap: break-word;
+  font-family: "Noto Serif", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 400;
+  color: #555;
+}
+
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+  margin-bottom: 1em;
+}
+
+h1, .h1 {
+  font-size: 2.2em;
+}
+
+h2, .h2 {
+  font-size: 1.8em;
+}
+
+h3, .h3 {
+  font-size: 1.4em;
+}
+
+p {
+  margin-bottom: 1.6em;
+}
+
+a {
+  color: #FA5D5A;
+  text-decoration: none;
+}
+
+a:hover, a:focus {
+  text-decoration: underline;
+}
+
+blockquote {
+  font-style: italic;
+  margin-bottom: 1.6em;
+  padding-left: 1.6em;
+  border-left: 10px solid rgba(0, 0, 0, 0.1);
+  color: #777;
+}
+
+blockquote:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+blockquote cite {
+  display: inline-block;
+  float: right;
+}
+
+blockquote p {
+  margin-bottom: 0;
+}
+
+ul, ol {
+  padding-left: 1.3em;
+  margin-bottom: 1.6em;
+}
+
+ul ul, ol ul {
+  padding-left: 1.6em;
+  margin-bottom: 0em;
+}
+
+ul ol, ol ol {
+  padding-left: 1.6em;
+  margin-bottom: 0em;
+}
+
+.btn, .wpcf7-submit {
+  width: auto !important;
+  background: #FA5D5A;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 0.7em;
+}
+
+body {
+  font-size: 20px;
+}
+
+@media (max-width: 43em) {
+  body {
+    font-size: 16px;
+  }
+}
+
+.header-wrap {
+  max-width: 65em;
+  margin: 0 auto;
+  padding: 2em;
+}
+
+.page-wrap {
+  width: 100%;
+  max-width: 45em;
+  padding: 4em 5%;
+  margin: 0 auto;
+}
+
+@media (max-width: 43em) {
+  .page-wrap {
+    width: 100%;
+  }
+}
+
+.header {
+  background: #ccc no-repeat center center;
+  background-size: cover;
+  position: relative;
+  height: 22em;
+}
+
+.header a {
+  text-decoration: none;
+  font-family: 'Novecentowide', "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: normal;
+  color: #333;
+}
+
+.header .logo {
+  font-size: 1em;
+  float: left;
+  margin-bottom: 1.6em;
+}
+
+@media (max-width: 43em) {
+  .header .logo {
+    float: none;
+    margin: 0 auto 1.6em;
+    text-align: center;
+  }
+}
+
+.header .logo a {
+  color: white;
+}
+
+.header .main-nav {
+  float: right;
+}
+
+@media (max-width: 43em) {
+  .header .main-nav {
+    float: none;
+    text-align: center;
+  }
+}
+
+.header .main-nav ul {
+  margin: 0;
+  padding: 0;
+}
+
+.header .main-nav li {
+  margin-left: 1em;
+  display: inline-block;
+}
+
+.header .main-nav a {
+  color: white;
+  display: block;
+  font-size: 0.6em;
+}
+
+.header .main-nav a:hover, .header .main-nav a:focus {
+  border-bottom: 2px solid white;
+}
+
+.post-article, .page-article {
+  margin-bottom: 4em;
+}
+
+.post-title {
+  font-family: 'Novecentowide', "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: normal;
+  color: #333;
+  font-size: 2.2em;
+  text-align: center;
+  line-height: 1.2em;
+}
+
+@media (max-width: 43em) {
+  .post-title {
+    font-size: 1.8em;
+  }
+}
+
+.post-title a {
+  color: #333;
+}
+
+.post-title a:hover, .post-title a:focus {
+  opacity: 0.8;
+  text-decoration: none;
+}
+
+.post-date {
+  display: block;
+  text-align: center;
+  margin-bottom: 3em;
+  color: #BBB;
+  font-size: 0.7em;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-family: 'Helvetica Neue', sans-serif;
+}
+
+.footer {
+  padding-top: 4em;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.archive-list {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 4em;
+}
+
+.archive-list h2 {
+  font-size: 1em;
+  font-weight: normal;
+  font-style: italic;
+}
+
+.comments-wrap {
+  margin-bottom: 4em;
+}
+
+.commentlist {
+  padding: 0;
+}
+
+.commentlist li {
+  padding: 1em 0;
+  list-style: none;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.commentlist .avatar {
+  float: left;
+  width: 15%;
+  margin-right: 1em;
+}
+
+.commentlist .comment-meta {
+  margin-bottom: 1em;
+}
+
+textarea, input {
+  max-width: 100%;
+  margin-bottom: 1em;
+  background: transparent;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  color: #555;
+  font-size: 1em;
+  font-family: 'Noto Serif', Georgia;
+}
+
+@media (max-width: 43em) {
+  .commentform label {
+    font-size: 1em;
+  }
+  .commentform input {
+    width: 50%;
+  }
+}
+
+.wpcf7-form p {
+  margin: 0;
+}
+/*# sourceMappingURL=style.css.map */
