@@ -12,4 +12,4 @@ Checkout the [Sonnet Installation Video](https://vimeo.com/65464754) on [Vimeo](
 
 ## Version
 
-* 1.0 - Initial Release (Aug 11, 2011)
+* 1.0 - Initial Release (Aug 11, 2013)
